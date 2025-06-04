@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="e.css" />
+  <style>
+    .header-bar {
+      background-color: #2bb3e7;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .feedback-link {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .feedback-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header-bar">
+    <div class="left-header">
+      <img src="redlogo.jpg" alt="logo" class="logo">
+      <span class="title">Foodies...</span>
+    </div>
+    <div>
+      <a href="feedback.html" class="feedback-link">Feedback</a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <h1>Food Menu</h1>
+  <div id="product-list"></div>
+
+  <h1>Your Cart</h1>
+  <hr>
+  <div id="cart"></div>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 M@verick. All rights reserved.
+  </footer>
+
+  <!-- Script -->
+  <script src="e.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      padding: 50px;
+      text-size-adjust: 15px;
+    }
+
+    .feedback-container {
+      background: lightblue;
+      padding: 30px;
+      border-radius: 18px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .feedback-container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: green;
+    }
+
+    .back-button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background-color: #6c757d;
+      color: white;
+      border-radius: 5px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .back-button:hover {
+      background-color: lightgrey;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feedback-container">
+    <h2>Feedback Form</h2>
+    <form onsubmit="submitFeedback(event)">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" required>
+        <option value="">Select</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Poor</option>
+        <option value="1">1 - Bad</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">← Back</button>
+  </div>
+
+  <script>
+    function submitFeedback(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const rating = document.getElementById("rating").value;
+      alert(`Thank you, ${name}! You rated us ${rating}/5.`);
+      // You can add logic to store or send feedback here
+    }
+
+    function goBack() {
+      window.history.back(); // Goes to previous page
+    }
+  </script>
+
+</body>
+</html>
